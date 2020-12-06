@@ -75,6 +75,7 @@ public class MyApplication extends Application{
                 InputStream is=getAssets().open("city.db");//读assets文件夹里面名为"city.db"的文件
                 FileOutputStream fos=new FileOutputStream(db);//使用File对象打开本地文件，从文件读取数据
                 int len=-1;
+
                 byte[] buffer=new byte[1024];
                 while ((len=is.read(buffer))!=-1){
                     /*使用write(byte[] b,int off,int len)方法写入文件。
